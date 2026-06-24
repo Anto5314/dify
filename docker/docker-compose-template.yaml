@@ -538,6 +538,11 @@ services:
     environment:
       DB_DATABASE: ${DB_PLUGIN_DATABASE:-dify_plugin}
       DB_SSL_MODE: ${DB_SSL_MODE:-disable}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-difyai123456}
+      REDIS_DB: ${REDIS_DB:-0}
+      REDIS_USE_SSL: ${REDIS_USE_SSL:-false}
       SERVER_PORT: ${PLUGIN_DAEMON_PORT:-5002}
       SERVER_KEY: ${PLUGIN_DAEMON_KEY:-lYkiYYT6owG+71oLerGzA7GXCgOT++6ovaezWAjpCjf+Sjc3ZtU+qUEi}
       MAX_PLUGIN_PACKAGE_SIZE: ${PLUGIN_MAX_PACKAGE_SIZE:-52428800}
@@ -600,6 +605,8 @@ services:
       seekdb:
         condition: service_healthy
         required: false
+      redis:
+        condition: service_started
 
   # ssrf_proxy server
   # for more information, please refer to
