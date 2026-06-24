@@ -545,6 +545,10 @@ services:
       - default
     environment:
       DB_DATABASE: ${DB_PLUGIN_DATABASE:-dify_plugin}
+      DB_USERNAME: ${DB_USERNAME:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-difyai123456}
+      DB_HOST: ${DB_HOST:-db_postgres}
+      DB_PORT: ${DB_PORT:-5432}
       DB_SSL_MODE: ${DB_SSL_MODE:-disable}
       SERVER_PORT: ${PLUGIN_DAEMON_PORT:-5002}
       SERVER_KEY: ${PLUGIN_DAEMON_KEY:-lYkiYYT6owG+71oLerGzA7GXCgOT++6ovaezWAjpCjf+Sjc3ZtU+qUEi}
