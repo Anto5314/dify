@@ -426,6 +426,7 @@ services:
                -c 'idle_in_transaction_session_timeout=${POSTGRES_IDLE_IN_TRANSACTION_SESSION_TIMEOUT:-0}'
     volumes:
       - db_data:/var/lib/postgresql/data
+      - ./db_postgres/init:/docker-entrypoint-initdb.d
     healthcheck:
       test:
         [
