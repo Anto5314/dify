@@ -548,11 +548,11 @@ services:
       DB_HOST: ${DB_HOST:-db_postgres}
       DB_PORT: ${DB_PORT:-5432}
       DB_SSL_MODE: ${DB_SSL_MODE:-disable}
-      REDIS_HOST: ${REDIS_HOST:-redis}
-      REDIS_PORT: ${REDIS_PORT:-6379}
-      REDIS_PASSWORD: ${REDIS_PASSWORD:-difyai123456}
-      REDIS_DB: ${REDIS_DB:-0}
-      REDIS_USE_SSL: ${REDIS_USE_SSL:-false}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: difyai123456
+      REDIS_DB: "0"
+      REDIS_USE_SSL: "false"
       SERVER_PORT: ${PLUGIN_DAEMON_PORT:-5002}
       SERVER_KEY: ${PLUGIN_DAEMON_KEY:-lYkiYYT6owG+71oLerGzA7GXCgOT++6ovaezWAjpCjf+Sjc3ZtU+qUEi}
       MAX_PLUGIN_PACKAGE_SIZE: ${PLUGIN_MAX_PACKAGE_SIZE:-52428800}
