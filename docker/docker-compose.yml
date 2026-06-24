@@ -698,7 +698,7 @@ services:
       - web
     ports:
       - "17890:80"
-      - "${EXPOSE_NGINX_SSL_PORT:-443}:${NGINX_SSL_PORT:-443}"
+      - "17891:443"
 
   # The Weaviate vector store.
   weaviate:
